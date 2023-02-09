@@ -11,7 +11,7 @@ with:
 registry: ghcr.io
 username: ${{ github.actor }}
 password: ${{ secrets.GH_TOKEN }}
-- name: Build the jbcaip Docker image
+- name: Build and publish the jbcaip Docker image
 run: |
        docker build . --tag ghcr.io/JacksonBarker/jbcaip:latest
        docker run ghcr.io/JacksonBarker/jbcaip:latest
